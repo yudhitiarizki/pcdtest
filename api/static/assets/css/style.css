@@ -1,0 +1,12 @@
+.button-custom {
+    border: 1px solid white;
+    padding: 10px 20px;
+    width: fit-content;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none; /* menghilangkan garis underline */
+    color: inherit;
+}

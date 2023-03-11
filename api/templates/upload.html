@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Free minimal portfolio web site template,minmal portfolio,porfolio,bootstrap template,html template,photography " />
+    <title>Home - Free Minimal portfolio template.Art Studio template.</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/rtl.css') }}">
+    <style>
+        form {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        form input[type="file"] {
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        form input[type="submit"] {
+            font-size: 15px;
+            padding: 10px 15px;
+            background-color: #aaa;
+            color: rgb(39, 31, 31);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #aaa;
+        }
+
+        #upload-btn {
+            display: block;
+            margin: 20px auto 0;
+            padding: 8px 16px;
+            background-color: #aaa;
+            color: rgb(39, 31, 31);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        #upload-btn:hover {
+            background-color: #aaa;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="nav-main">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand font-weight-bold" href="/">Team 5</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Thank you</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!--end:Nav -->
+        </div>
+    </div>
+    <!--end:Navigation -->
+    <main role="main">
+        <section class="pt-4">
+            <div class="container">
+                <div class="row d-flex align-items-center justify-content-start">
+                    <div class="col-md-6">
+                        <figure><img src="{{ url_for('static', filename='assets/img/photo-1484755560615-a4c64e778a6c.jpg') }}" alt="" class="img-fluid">
+                        </figure>
+                    </div>
+                    <!-- end:col -->
+                    <div class="col-md-6 pl-lg-5 pl-md-5">
+                        <h2>
+                            Lets try the service! Enhance Your Photos with Our Face Detection and Blur Technology
+                        </h2>
+                        <p class="lead mt-4">Transform your portraits into works of art with our cutting-edge face detection and blur technology. Our award-winning design and craft studio utilizes state-of-the-art algorithms to accurately detect faces in your photos and seamlessly blur them for a stunning artistic effect. Let us unlock the power of your imagination with our innovative face detection and blur solutions.</p>
+
+
+                        <div class="contact-form mt-5 col-12">
+                            <form action="/upload" method="POST" enctype="multipart/form-data">
+                                <input type="file" name="image">
+                                <input type="submit" value="Upload">
+                              </form>
+                        </div>
+                </div>
+                <hr class="mt-5">
+            </div>
+        </section>
+    </main>
+    <footer class="position-relative">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-auto mt-4">
+                    <p class="mb-4">Kelompok 5</p>
+                </div>
+                <div class="col-lg-3 mt-4 ml-auto">
+                    <p>Bogor
+                        <br> Sekolah Vokasi
+                        <br> IPB
+                    </p>
+                </div>
+                <div class="col-lg-3 mt-4 ml-auto">
+                    <ul class="list-unstyled footer-link">
+                        <li><a href="#">instagram</a></li>
+                        <li><a href="#">facebook</a></li>
+                        <li><a href="#">twitter</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-auto ml-lg-auto mt-4">
+                    <ul class="list-unstyled footer-link">
+                        <li><a href="#">instagram</a></li>
+                        <li><a href="#">facebook</a></li>
+                        <li><a href="#">twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </footer>
+    <script src="{{ url_for('static', filename='assets/js/main.min.js') }}"></script>
+    <script>
+        function updateFileName() {
+            var fileName = document.getElementById("upload").value.split("\\").pop();
+            document.getElementById("drop-text").innerHTML = fileName;
+        }
+    </script>
+</body>
+
+</html>
