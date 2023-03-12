@@ -1,5 +1,4 @@
 import cv2
-import numpy as np
 from function.face_detection import detect_faces
 
 def blur_faces(image):
